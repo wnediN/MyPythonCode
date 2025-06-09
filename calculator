@@ -1,0 +1,107 @@
+print('Hello Houston')
+'''can use double quotes'''
+print(4+5)
+print(8-20)
+print(5+10-3+7)
+print(0*5)
+print(10/5*3)
+print(10/(5*3))
+print(10+2*5-50/25)
+# this is a comment
+# we are finding the circumference of a rectangle with W=5 and L=7
+print(5+7+5+7)
+print(2*5+2*7)
+print(2*(5+7))
+
+# modulus operation a%b finds the remainder of the division a/b
+print(27%5)
+print(12948102983%10)
+
+# exponentiation operator a**b (a^b)
+print(5**3)
+print(13**10)
+
+# compute the area of a circle with radius of 10
+print(3.14*10*10)
+# above is only a rough estimation because PI goes to infinity
+print(3.14159265358979323846264*10*10)
+print(3.14159265358979323846264*17*17)
+
+pi = 3.14159265358979323846264
+r1 = 5
+r2 = 10
+r3 = 7
+print('area of circle a where radius is 5: ', pi*r1**2)
+print('area of circle b where radius is 10: ', pi*r2**2)
+print('area of circle c where radius is 7: ', pi*r3**2)
+print()
+# better version of the above
+# avoid writing values literally, we can use f-strings
+print(f'area of circle a where radius is {r1}: ', pi*r1**2)
+print(f'area of circle b where radius is {r2}: ', pi*r2**2)
+print(f'area of circle c where radius is {r3}: ', pi*r3**2)
+print()
+# instead of using two argument in print statements
+# #we can use a single f string in each print function
+print(f'area of circle a where radius is {r1}: {pi*r1**2}')
+print(f'area of circle b where radius is {r2}: {pi*r2**2}')
+print(f'area of circle c where radius is {r3}: {pi*r3**2}')
+print()
+# print lines are too long, we want to give a name to the line
+# so that we can shorten it, must define a function in order to do so
+def circle_area(r):
+    print(f'area of circle a where radius is {r}: {pi*r**2}')
+
+print('define function: ')
+circle_area(5)
+circle_area(10)
+circle_area(7)
+
+def sum_uptoN(N):
+    print(f'1+2+...+{N} = {N*(N+1)/2}')
+
+sum_uptoN(100)
+
+#volume
+def volume_cylinder(r, h):
+    print(f'volume of cylinder where radius is {r} and height is {h}: {pi*r**2*h}')
+volume_cylinder(10, 12)
+volume_cylinder(15, 7)
+volume_cylinder(7, 10)
+
+'''
+pi = 3.14159265358979323846264
+print(pi*10*10)
+print(pi*17*17)
+r = 10
+print(pi*r*r)
+# compute volume of cylinder with r=10 and h=7
+h = 7
+print(pi*r**2*h)
+
+h1 = 12
+r1 = 10
+print(pi*r1**2*h1)
+
+h2 = 7
+r2 = 15
+print(pi*r2**2*h2)
+
+h3 = 10
+r3 = 7
+print(pi*23**2*h3)
+'''
+number1 = input("enter: ")
+num1 = int(number1)
+number2 = input("enter: ")
+num2 = int(number2)
+sign = input("sign: ")
+
+if(sign == '+'):
+    print(num1+num2)
+elif(sign == '-'):
+    print(num1-num2)
+elif(sign == '*'):
+    print(num1*num2)
+elif(sign == '/'):
+    print(num1/num2)
