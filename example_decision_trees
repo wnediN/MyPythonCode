@@ -12,18 +12,18 @@ else:
 
 
 #EARTHQUAKE
-mag = float(input('Earthquake magnitude?: '))
+mag = float(input('Earthquake magnitude: '))
 if mag < 2.0:
-    print('Micro')
+    print('Classification: Micro')
 elif 2.0 <= mag <= 3.9:
-    print('Minor')
+    print('Classification: Minor')
 elif 4.0 <= mag <= 4.9:
-    print('Light')
+    print('Classification: Light')
 elif 5.0 <= mag <= 5.9:
-    print('Moderate')
+    print('Classification: Moderate')
 elif 6.0 <= mag <= 6.9:
-    print('Strong')
+    print('Classification: Strong')
 elif 7.0 <= mag <= 7.9:
-    print('Major')
+    print('Classification: Major')
 else:
-    print('Great')
+    print('Classification: Great')
