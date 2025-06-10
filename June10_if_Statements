@@ -56,3 +56,30 @@ elif 70 <= grade:
     print('C')
 else:
     print('F')
+
+# decision tree
+hunger = input('Are you hungry? (yes/no): ')
+if hunger == 'yes':
+    user = input('Is there fruit? (yes/no): ')
+    if user == 'yes':
+        print('eat fruit')
+    else:
+        print('eat a savory snack')
+else:
+    print('drink some water')
+
+mag = float(input('Earthquake magnitude?: '))
+if mag < 2.0:
+    print('Micro')
+elif 2.0 <= mag <= 3.9:
+    print('Minor')
+elif 4.0 <= mag <= 4.9:
+    print('Light')
+elif 5.0 <= mag <= 5.9:
+    print('Moderate')
+elif 6.0 <= mag <= 6.9:
+    print('Strong')
+elif 7.0 <= mag <= 7.9:
+    print('Major')
+else:
+    print('Great')
