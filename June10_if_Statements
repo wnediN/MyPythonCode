@@ -1,0 +1,69 @@
+# if statements
+
+# store reduces total price by 10% if the total price is more than $100
+price = int(input('please enter the total price: '))
+if price >= 100:
+    # print(f' you get a discount: {price*0.9}')
+    price = price*0.9
+# else:
+    # print(price)
+
+print(f'You pay: {price}')
+print(type(price))
+
+# what happens if user enters a fractional number?
+# the int() function won't accept a float as a valid input and raises and error
+# to fix it, we will convert the entered string into a 'float' or 'double'
+price = float(input('please enter the total price: '))
+if price >= 100:
+    # print(f' you get a discount: {price*0.9}')
+    price = price*0.9
+# else:
+    # print(price)
+
+print(f'You pay: {price}')
+print(type(price))
+
+# example of if, else
+# restaurant: manager makes 50 dollars per hour and cook makes 35 dollars an hour
+n_hours = float(input('Enter number of hours: '))
+position = input('enter your positions (manager/cook): ')
+salary = 0
+if position == 'manager':
+    salary = n_hours*50
+else:
+    salary = n_hours*35
+print(salary)
+
+# grades
+grade = int(input('Your grade: '))
+if 90 <= grade <= 100:
+    print('A')
+elif 80 <= grade < 90:
+    print('B')
+elif 70 <= grade < 80:
+    print('C')
+else:
+    print('F')
+
+# another way
+grade = int(input('Your grade: '))
+if 90 <= grade:
+    print('A')
+elif 80 <= grade:
+    print('B')
+elif 70 <= grade:
+    print('C')
+else:
+    print('F')
+
+# decision tree
+hunger = input('Are you hungry? (yes/no): ')
+if hunger == 'yes':
+    user = input('Is there fruit? (yes/no): ')
+    if user == 'yes':
+        print('eat fruit')
+    else:
+        print('eat a savory snack')
+else:
+    print('drink some water')
