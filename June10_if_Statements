@@ -56,14 +56,3 @@ elif 70 <= grade:
     print('C')
 else:
     print('F')
-
-# decision tree
-hunger = input('Are you hungry? (yes/no): ')
-if hunger == 'yes':
-    user = input('Is there fruit? (yes/no): ')
-    if user == 'yes':
-        print('eat fruit')
-    else:
-        print('eat a savory snack')
-else:
-    print('drink some water')
