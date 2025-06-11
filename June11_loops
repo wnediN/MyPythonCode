@@ -37,3 +37,38 @@ while count < 302:
     total += count
     count += 3
 print(total)
+
+# sum all numbers between two give numbers in increments of 5
+def multiple_of_five(N):
+    if N % 5 == 0:
+        print(f'{N} is divisible by 5')
+    else:
+        print(f'{N} is not divisible by 5')
+
+multiple_of_five(int(input('enter # N: ')))
+
+# print all divisible by 5
+def multiple_of_five(N):
+    if N % 5 == 0:
+        return True
+    else:
+        return False
+x = 0
+while x < 101:
+    d = multiple_of_five(x)
+    if d == True:
+        print(f'{x} is divisible by 5')
+    x += 1
+
+# multiples of 13
+def multiple_of_thirteen(N):
+    if N % 13 == 0:
+        return True
+    else:
+        return False
+x = 0
+while x < 101:
+    d = multiple_of_thirteen(x)
+    if d == True:
+        print(f'{x} is divisible by 13')
+    x += 1
