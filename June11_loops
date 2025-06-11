@@ -1,0 +1,39 @@
+# print numbers from 1 to 10
+x = 1
+while x <= 10:
+    print(x)
+    x += 1
+
+for x in range(10):
+    x += 1
+    print(x)
+
+# write program while loop that prints numbers 0, 5, 10, 15...100
+count = 0
+while count < 101:
+    print(count)
+    count += 5
+
+for count in range(0, 101, 5):
+    print(count)
+
+# n(n+1) / 2
+count = 0
+total = 0
+while count < 11:
+    total += count
+    count += 1
+print(total)
+
+total = 0
+for count in range(11):
+    total += count
+print(total)
+
+# sum of 1 + 4 + 7 + 10 ...301
+total = 0
+count = 1
+while count < 302:
+    total += count
+    count += 3
+print(total)
