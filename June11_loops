@@ -1,3 +1,4 @@
+import math
 # print numbers from 1 to 10
 x = 1
 while x <= 10:
@@ -94,3 +95,24 @@ while A < B+1:
     if A_to_B(A, B) == True:
         print(A)
     A += 1
+
+# take integer and tells us if integer is prime or not
+def is_prime(x):
+    min = 2
+    while min <= math.sqrt(x):
+        if x % min == 0:
+            return False
+        min += 1
+
+x = int(input('enter x: '))
+if is_prime(x) == False:
+    print('not a prime')
+else:
+    print('is prime')
+
+# print all prime numbers from 1 to 100
+x = 2
+while x < 101:
+    if is_prime(x) != False:
+        print(x)
+    x += 1
