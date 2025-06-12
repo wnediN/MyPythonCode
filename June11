@@ -44,3 +44,39 @@ while k < 301:
     if 20 < k < 280:
         continue
     print(k)
+
+
+
+# minimizing cost
+# f(p) = 2 * (p - 3)^2 + 15
+# its derivative is
+# f'(p) = 4(p-3)
+
+# set parameters
+alfa = 0.1
+
+# start with random price
+p = 10
+
+# the next price is p = p - alfa - fprime
+# 1st iteration
+# fprime = 4 * (p - 3)
+# p = p - alfa * fprime
+# print(p)
+
+# 2nd iteration
+# fprime = 4 * (p - 3)
+# p = p - alfa * fprime
+# print(p)
+
+# 3rd iteration
+# fprime = 4 * (p - 3)
+# p = p - alfa * fprime
+# print(p)
+
+k = 0
+while k < 50:
+    fprime = 4 * (p - 3)
+    p = p - alfa * fprime
+    print(p)
+    k += 1
