@@ -48,3 +48,16 @@ while abs(fprime) > 0.000001:
     fprime = 4 * (p - 3)
     p = p - alfa * fprime
     print(f'updated price: {p}, and slope: {fprime}')
+
+
+# set parameters
+alfa = 0.0000001
+
+# start with a random guess for the price
+p = 5
+fprime = 2 * (p ** 5 - 3) * (5 * p**4)
+
+while abs(fprime) > 0.0001:
+    fprime = 2 * (p**5 - 3) * (5 * p**4)
+    p = p - alfa * fprime
+    print(f'updated price: {p}, and slope: {fprime}')
