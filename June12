@@ -111,3 +111,12 @@ while x < 7:
     x += 1
 print(tot)
 print('average:', tot/7)
+
+# find the number of people older than 50 (50 included)
+k = 0
+count = 0
+while k < 7:
+    if ages[k] >= 50:
+        count += 1
+    k += 1
+print(count)
