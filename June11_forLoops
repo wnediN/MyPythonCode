@@ -1,0 +1,46 @@
+x = 1
+while x < 11:
+    print(x)
+    x += 1
+
+# if we want to skip printing 4, we can use 'continue' statement
+k = 0
+while k < 10:
+    k += 1
+    if k == 4:
+        continue
+    print(k)
+
+
+# prints all odd numbers 1 to 100
+k = 1
+while k <= 100:
+    print(k)
+    k += 2
+# or
+k = 0
+while k < 100:
+    k += 1
+    if k % 2 == 0:
+        continue
+    else:
+        print(k)
+
+
+# break statement: when python sees a break statement within a loop,
+# it breaks and goes to the next statement outside the loop
+i = 1
+while i <= 1000000:
+    if i > 15:
+        break
+    i += 1
+    print(i)
+
+# 4, 7, 10, ... 301
+# except all elements between 20 and 280 are skipped
+k = 1
+while k < 301:
+    k += 3
+    if 20 < k < 280:
+        continue
+    print(k)
