@@ -120,3 +120,15 @@ while k < 7:
         count += 1
     k += 1
 print(count)
+
+# write a function, ages list of ages, age_limit is the age
+def count_people_older_than_age(ages, age_limit):
+    k = 0
+    count = 0
+    while k < len(ages):
+        if ages[k] >= age_limit:
+            count += 1
+        k += 1
+    print(count)
+ages = [34, 25, 15, 76, 68, 50, 23]
+count_people_older_than_age(ages, 49)
