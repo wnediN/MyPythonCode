@@ -62,33 +62,3 @@ while abs(fprime) > 0.0001:
     p = p - alfa * fprime
     print(f'updated price: {p}, and slope: {fprime}')
 
-# LISTS
-age = [53, 3, 17, 12, 23]
-
-# read the age at index 0, 3, 4, -1, -2
-print(age[0])
-print(age[3])
-print(age[4])
-print(age[-1])
-print(age[-2])
-
-# we can read a slice from the list
-# a:b, index a is included while b is excluded
-print(age[1:5])
-print(age[-4:-1])
-print(age[0:])
-print(age[:4])
-
-k = 2
-while k < 6:
-    print(age[k])
-    k += 1
-
-ages = [34, 25, 15, 76, 68, 50, 23]
-x = 0
-tot = 0
-while x < 7:
-    tot += ages[x]
-    x += 1
-print(tot)
-print('average:', tot/7)
