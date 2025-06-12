@@ -40,11 +40,11 @@
 # set parameters
 alfa = 0.1
 
-# start with a random guess for the price
+# start with a random guess for the price, can also start with 2. negative slope doesn't matter because absolute value
 p = 100
 fprime = 4 * (p - 3)
 
-while fprime > 0.000001:
+while abs(fprime) > 0.000001:
     fprime = 4 * (p - 3)
     p = p - alfa * fprime
     print(f'updated price: {p}, and slope: {fprime}')
