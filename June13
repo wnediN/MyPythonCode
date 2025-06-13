@@ -41,3 +41,22 @@ print(y)
 # ages = (34, 25, 15, 76, 68, 50, 23)
 # ages.append(45) #raises an error
 # print(ages)
+
+
+# We can edit a list but not a tuple
+print(ages)
+ages[2] = 35
+print(ages)
+
+# using a while loop to visit each item in a list takes a few lines
+ages = [34, 25, 15, 76, 68, 50, 23]
+k = 0
+while k < len(ages):
+    print(ages[k])
+    k += 1
+
+# print('')
+# use for loop to do the same thing as above
+for age in ages:
+    print(age)
+
