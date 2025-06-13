@@ -60,3 +60,11 @@ while k < len(ages):
 for age in ages:
     print(age)
 
+
+# TUPLE unpacking
+personA = ('Luna', 25)
+personB = ('Maria', 37)
+print(personA[0], personA[1])
+# here personA[0] os cryptic, not indicating any further info
+name, age = personA
+print(name, age)
