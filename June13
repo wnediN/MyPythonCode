@@ -68,3 +68,25 @@ print(personA[0], personA[1])
 # here personA[0] os cryptic, not indicating any further info
 name, age = personA
 print(name, age)
+
+# go through the list of ages and print only the ages that are between 20 and 55
+ages = [34, 25, 15, 76, 68, 50, 23]
+for age in ages:
+    if 20 < age < 55:
+        print(age)
+
+# find the average age
+tot = 0
+for age in ages:
+    tot += age
+print('average: ', tot/len(ages))
+
+def ave(x):
+    tot = 0
+    for num in x:
+        tot += num
+    ave = tot/len(x)
+    return ave
+ave_age = ave(ages)
+print(ave_age)
+
