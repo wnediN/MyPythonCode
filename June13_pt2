@@ -1,0 +1,83 @@
+import math
+# go through the list of ages and print only the ages that are between 20 and 55
+ages = [34, 25, 15, 76, 68, 50, 23]
+for age in ages:
+    if 20 < age < 55:
+        print(age)
+
+# find the average age
+tot = 0
+for age in ages:
+    tot += age
+print('average: ', tot/len(ages))
+
+def ave(x):
+    tot = 0
+    for num in x:
+        tot += num
+    ave = tot/len(x)
+    return ave
+ave_age = ave(ages)
+print(ave_age)
+
+# variance: biased = divide by n; unbiased = divide by n-1
+def variance(ages):
+    sum = 0
+    for age in ages:
+        sum += ((age - ave_age)**2)
+    return sum/(len(ages)-1)
+var = variance(ages)
+print('variance:', variance(ages))
+
+print('st. deviation:', math.sqrt(var))
+
+# counting 0 crossing
+# find the number of times a signal crosses the x-axis
+def num_zero_crossing(s):
+    count = 0
+    k = 1
+    while k < len(s):
+        if s[k] * s[k-1] < 0:
+            count += 1
+        k += 1
+    return count
+# if current element * previous number is negative, then there is a crossing
+
+s = [3, 5, -2, -7, 1, -2, -3, -5, 9, 5, -1, 1]
+x = [4, 4, 5, -4, 4]
+count = num_zero_crossing(s)
+print(count)
+
+# finding period
+F = [100, 200, 125, 230]
+
+# our security system opens the door if a test person's zero crossing is within +-10 of
+# any family member's crossing
+T = 150
+
+def open_or_not(F, T):
+    x = num_zero_crossing(F)
+    for n in F:
+        if T<(n+10) and T>(n-10):
+            return True
+    return False
+# or
+'''
+for n in F:
+    delta = math.abs(T-n)
+    if delta<10:
+        return True
+return False
+'''
+print(open_or_not(F, T))
+
+# return number closest to list given T
+F = [100, 200, 125, 230]
+T = 220
+def closest_t(F, T):
+    for n in F:
+        min = n
+        if abs(T-n) < min:
+            min = n
+    return n
+print('closest:', closest_t(F, T))
