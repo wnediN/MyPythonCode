@@ -1,0 +1,17 @@
+# creating a new list and adding items to it
+# we can start a variable with an empty list
+ages = []
+print(ages)
+
+# add 56
+ages.append(56)
+print(ages)
+
+ages.append(16)
+print(ages)
+
+# insert and item at any location
+ages.insert(0, 85)
+print(ages)
+ages.insert(2, 11)
+print(ages)
