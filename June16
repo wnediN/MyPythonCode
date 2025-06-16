@@ -1,0 +1,60 @@
+def largest(a, b):
+    # largest number out of given two numbers
+    # returns a if a>b, otherwise returns b
+    big = max(a, b)
+    return big
+l = largest(5, 6)
+print(l)
+
+def largest_num(a, b, c):
+    bigs = max(a, b, c)
+    return bigs
+
+l = largest_num(5, 4, 10)
+print(l)
+
+def largest_number(a, b, c):
+    largest = float("-inf")
+    # or largest = a
+    if a > largest:
+        largest = a
+    if b > largest:
+        largest = b
+    if c > largest:
+        largest = c
+    return largest
+
+def maximum(v):
+    largest = v[0]
+    for i in v:
+        if i > largest:
+            largest = i
+    return largest
+v = [-2, 5, 0, 7, 30, -1, 8, 5]
+l = maximum(v)
+print(l)
+
+def minimum(v):
+    min = v[0]
+    for num in v:
+        if num < min:
+            min = i
+    return min
+v = [-2, 5, 0, 7, 30, -1, 8, 5]
+m = minimum(v)
+print(m)
+
+# DICTIONARIES
+# create a dictionary using this syntax
+# english = {word1: meaning, word2: meaning...wordN: meaning}
+# where each is key: value
+english = {'hello': 'a common greeting', 'goodbye': 'said right before leaving'}
+
+# we can reach to each item by using its keys in the subscript notation
+print(english['hello'])
+# here it returns the associated value
+print(english['goodbye'])
+
+# add to dictionary
+english['morning'] = 'time when the sun rises'
+print(english) # print entire dictionary
