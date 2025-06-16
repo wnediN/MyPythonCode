@@ -1,0 +1,61 @@
+animals = ['dog', 'cat', 'dog', 'cat', 'cat', 'cat', 'dog']
+
+def animal_count(v):
+    res = {}
+    for animal in v:
+        if animal not in res:
+            res[animal] = 1
+            continue
+        res[animal] += 1
+    return res
+
+res = animal_count(animals)
+print(res)
+
+def winner_yes(d):
+    key_ = None
+    value_ = float("-inf")
+    for (key, value) in d.items():
+        if value > value_:
+            value_ = value
+            key_ = key
+    return (key_, value_)
+
+
+
+animal_counts = animal_count(animals)
+print(animal_counts)
+largest_count = winner_yes(animal_counts)
+print(largest_count)
+
+# weights for high and middle school students
+wpos = [50, 60, 70, 65]
+wneg = [40, 55, 52, 41, 43]
+# weight of a test person
+T = 45
+
+# use INN to classify T into post (high_school) or neg (middle_school) class
+# find the nearest weight in the wpos to T
+# find nearest weight in wneg to T
+# compare then nearest of the above two nearest values
+
+# v is list of numbers
+def smallest_distance_T(T, v):
+    distance = abs(T-v[0])
+    num = 0
+    for i in v:
+        if abs(T-i) <= distance:
+            distance = abs(T-i)
+            num = i
+    return num
+
+dpos = smallest_distance_T(T, wpos)
+print(dpos)
+
+dneg = smallest_distance_T(T, wneg)
+print(dneg)
+
+if dpos < dneg:
+    print('positive class')
+else:
+    print('negative class')
