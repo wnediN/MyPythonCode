@@ -58,3 +58,54 @@ print(english['goodbye'])
 # add to dictionary
 english['morning'] = 'time when the sun rises'
 print(english) # print entire dictionary
+
+# exercise
+# write a function accepting a list of strings which can be either dog or cat
+# and it returns a dictionary
+# for instance, if input below, the function receives this list and returns
+# a dictionary: {'dog': 3, 'cat': 4}
+animals = ['dog', 'cat', 'dog', 'cat', 'cat', 'cat', 'dog']
+
+cat = 0
+dog = 0
+for word in animals:
+    if word == 'cat':
+        cat += 1
+    if word == 'dog':
+        dog += 1
+animal = {'dog': dog, 'cat': cat}
+print(animal)
+
+# another way
+def animal_count(v):
+    res = {}
+    for animal in v:
+        if animal not in res:
+            res[animal] = 1
+            continue
+        res[animal] += 1
+    return res
+
+res = animal_count(animals)
+print(res)
+
+
+# return a function that receives and list 'v' and returns a list of unique values
+# use only lists
+def unique_values(v):
+    result = []
+    for word in v:
+        if word not in result:
+            result.append(word)
+    return result
+animals = ['dog', 'cat', 'dog', 'cat', 'cat', 'cat', 'dog', 'rabbit']
+result = unique_values(animals)
+print(result) # \['dog', 'cat']
+
+
+# check if key is in dictionary
+A = {'dog': 3, 'cat': 4}
+if 'car' in A:
+    print(A['car'])
+else:
+    print(f'car is not a key')
