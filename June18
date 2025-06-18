@@ -40,3 +40,4 @@ w = 2 * np.pi * 3
 sinfn = np.sin(w * t)
 plt.plot(t, sinfn)
 plt.show()
+#plt.plot(t, sinfn, marker='^', color='red')
