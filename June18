@@ -41,3 +41,33 @@ sinfn = np.sin(w * t)
 plt.plot(t, sinfn)
 plt.show()
 #plt.plot(t, sinfn, marker='^', color='red')
+
+# new
+fig, axes = plt.subplots(2, 2, figsize=(10, 8))
+
+t = np.linspace(0, 1, 101)
+sinfn1 = np.sin(2 * np.pi * 1 * t)
+sinfn2 = np.sin(2 * np.pi * 2 * t)
+sinfn3 = np.sin(2 * np.pi * 3 * t)
+sinfn4 = np.sin(2 * np.pi * 4 * t)
+
+# 2) First row, first col -> (1, 1)
+axes[0, 0].plot(t, sinfn1)
+axes[0, 0].set_xlabel("Time (sec)")
+axes[0, 0].set_ylabel("Sin Function - 1 HZ")
+# 3) First rows, second col -> (1, 2))
+axes[0, 1].plot(t, sinfn2)
+axes[0, 1].set_xlabel("Time (sec)")
+axes[0, 1].set_ylabel("Sin Function - 2 HZ")
+# 4) Second Row, first col -> (2, 2)
+axes[0, 2].plot(t, sinfn3)
+axes[0, 2].set_xlabel("Time (sec)")
+axes[0, 2].set_ylabel("Sin Function - 3 HZ")
+# 5) Second row , second col -> (2,2)
+axes[0, 3].plot(t, sinfn4)
+axes[0, 3].set_xlabel("Time (sec)")
+axes[0, 3].set_ylabel("Sin Function - 4 HZ")
+
+# 6) Tidy up
+fig.tight_layout()
+plt.show()
