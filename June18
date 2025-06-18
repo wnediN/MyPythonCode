@@ -33,3 +33,10 @@ data = np.array([
     [163, 55, 1],
     [177, 68, 1],
 ])
+
+# sin function
+t = np.linspace(0, 1, 1001)
+w = 2 * np.pi * 3
+sinfn = np.sin(w * t)
+plt.plot(t, sinfn)
+plt.show()
