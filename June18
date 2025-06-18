@@ -115,3 +115,37 @@ plt.legend()
 plt.grid(True)
 plt.show()
 #######
+# for same data set as both above
+# split features and labels
+x = data[:, :2]
+y = data[:, 2]
+
+# normalize features using standardization (zero mean, unit variance)
+scaler = StandardScaler()
+x_scaled = scaler.fit_transform(x)
+
+
+height = x_scaled[:, 0]
+weight = x_scaled[:, 1]
+
+# plot
+plt.figure(figsize=(8, 6))
+plt.scatter(height[y == 0], weight[y == 0], label='8th grade', marker ='o')
+plt.scatter(height[y == 1], weight[y == 1], label='10th grade', marker='s')
+plt.xlabel("Normalized Height")   
+plt.ylabel("Normalized Weight")   
+plt.title("Normalized Height vs Weight") 
+plt.legend()
+plt.grid(True)
+plt.show()
+
+# split into training and test sets (80% train, 20% test)
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=17)
+
+# train random forest classifier
+model = RandomForestClassifier(random_state=42)
+model.fit(x_train, y_train)
+
+y_pred = model.predict(x_test)
+
+print("Accuracy:", accuracy_score(y_test, y_pred))
