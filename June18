@@ -11,29 +11,6 @@ plt.xlabel("Days")
 plt.ylabel("Number of Birds")
 plt.title("State Park Bird Counts")
 
-data = np.array([
-    [152, 39, 0],
-    [159, 46, 0],
-    [144, 41, 0],
-    [160, 51, 0],
-    [150, 53, 0],
-    [156, 38, 0],
-    [162, 59, 0],
-    [148, 50, 0],
-    [161, 42, 0],
-    [149, 55, 0],
-    [167, 53, 1],
-    [173, 66, 1],
-    [155, 63, 1],
-    [169, 58, 1],
-    [176, 47, 1],
-    [171, 60, 1],
-    [179, 51, 1],
-    [157, 70, 1],
-    [163, 55, 1],
-    [177, 68, 1],
-])
-
 # sin function
 t = np.linspace(0, 1, 1001)
 w = 2 * np.pi * 3
@@ -70,4 +47,44 @@ axes[1, 1].set_ylabel("Sin Function - 4 HZ")
 
 # 6) Tidy up
 fig.tight_layout()
+plt.show()
+
+# STUDENT HEIGHT VS WEIGHT
+data = np.array([
+    [152, 39, 0],
+    [159, 46, 0],
+    [144, 41, 0],
+    [160, 51, 0],
+    [150, 53, 0],
+    [156, 38, 0],
+    [162, 59, 0],
+    [148, 50, 0],
+    [161, 42, 0],
+    [149, 55, 0],
+    [167, 53, 1],
+    [173, 66, 1],
+    [155, 63, 1],
+    [169, 58, 1],
+    [176, 47, 1],
+    [171, 60, 1],
+    [179, 51, 1],
+    [157, 70, 1],
+    [163, 55, 1],
+    [177, 68, 1],
+])
+print(f'Shape: {data.shape}')
+# separate feature and labels
+height = data[:, 0]
+weight = data[:, 1]
+labels = data[:, 2]
+
+# plot
+plt.figure(figsize=(8, 6))
+plt.scatter(height[labels == 0], weight[labels==0], label='8th grade', marker ='o')
+plt.scatter(height[labels == 1], weight[labels == 1], label='10th grade', marker='s')
+plt.xlabel("Height (cm")   
+plt.ylabel("Weight (kg)")   
+plt.title("Student Height vs Weight") 
+plt.legend()
+plt.grid(True)
 plt.show()
