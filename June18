@@ -49,6 +49,7 @@ axes[1, 1].set_ylabel("Sin Function - 4 HZ")
 fig.tight_layout()
 plt.show()
 
+########
 # STUDENT HEIGHT VS WEIGHT
 data = np.array([
     [152, 39, 0],
@@ -88,3 +89,29 @@ plt.title("Student Height vs Weight")
 plt.legend()
 plt.grid(True)
 plt.show()
+
+#######
+# SCALED version of above
+# split features and labels
+x = data[:, :2]
+y = data[:, 2]
+
+# normalize features using standardization (zero mean, unit variance)
+scaler = StandardScaler()
+x_scaled = scaler.fit_transform(x)
+
+
+height = x_scaled[:, 0]
+weight = x_scaled[:, 1]
+
+# plot
+plt.figure(figsize=(8, 6))
+plt.scatter(height[y == 0], weight[y == 0], label='8th grade', marker ='o')
+plt.scatter(height[y == 1], weight[y == 1], label='10th grade', marker='s')
+plt.xlabel("Normalized Height")   
+plt.ylabel("Normalized Weight")   
+plt.title("Normalized Height vs Weight") 
+plt.legend()
+plt.grid(True)
+plt.show()
+#######
